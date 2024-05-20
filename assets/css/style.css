@@ -1,11 +1,37 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Resete */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body,
+canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed,
+fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5 , h6, header, hgroup,
+html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output,
+p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table,
+tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html, body{
+    min-height: 100vh; 
+    line-height:1;
+}
+ol, ul{list-style: none}
+blockquote, q {quotes: none}
+blockquote:after, blockquote:before, q:after, q:before {
+    content: '';
+    content: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 body {
@@ -46,12 +72,20 @@ h1 {
     font-size: 2.25rem;
     line-height: 1.3333;
     text-align: left;
+    padding: 0 0 1.4rem 0;
+}
+
+p {
+    color: #ffffff;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 0 0 1.4rem 0;
 }
 
 .card {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    flex-direction: row;
 
     max-width: 81.25rem;
     min-height: 70vh;
@@ -62,12 +96,16 @@ h1 {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
-.card_image-container {  
+.card_image-container {
+    flex: 0 1 30%;
+    max-height: inherit;  
     background-image: url("../images/Tanjiro_Demon_Slayer_Mark_Profile.webp");
-    background-size: cover;
-    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:0 center;
     border-bottom-left-radius: 0.8rem;
-    max-height: 15rem;
+    border-top-left-radius: 0.8rem;
+    max-height: 100%;
 }
 
 .card_image {
@@ -77,10 +115,8 @@ h1 {
 
 .card_contents {
     display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-align: justify;
-    line-height: 1.2rem;
+    flex-direction: column; 
+    flex: 1 1 55%;   
     padding: 2rem 2rem 5rem 2rem;
 }
 
@@ -99,27 +135,11 @@ h1 {
 }
 
 .card_body {
-    flex: 1 1 1;
+    flex: 1 1 auto;
 }
 
 .card_title {
-    margin-top: 0;
-}
-
-@media only screen and (min-width: 53rem) {
-    .card {
-        flex-direction: row;
-        min-height: 60vh;
-    }
-
-    .card_image-container {
-        flex: 0 1 45%;
-        max-height: inherit;
-    }
-
-    .card_contents {
-        flex: 1 1 55%;
-    }
+    margin: 0;
 }
 
 [class^="icon--"] {
@@ -333,6 +353,7 @@ h1 {
 .fullscreen-menu_nav a {
     display: block;
     font-size: 1.4rem;
+    font-weight: 300;
     padding: 1rem;
     color: #ffffff;
     text-decoration: none;
