@@ -1,4 +1,4 @@
-# Tela de Login com Animações CSS e Visualização de Senha
+# Responsive Fullscreen Menu
 
 Este é um projeto de um Menu Fullscreen desenvolvido utilizando HTML, CSS e Javascript. A tela possui animações CSS para melhorar a experiência do usuário.
 
