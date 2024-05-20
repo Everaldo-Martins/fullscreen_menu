@@ -14,14 +14,15 @@ body {
     font-style: normal;    
     font-weight: 300;
     font-size: 16px;
-    line-height: 1.75;
+    line-height: 1;
     color: #ffffff;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 
-    min-height: 100vh;
+    min-height: calc(100vh - 4rem);
     padding: 2rem;
 
     background-image: linear-gradient(#1f1f1f, #212121), url("../images/hashira-all-members-kimetsu-no-yaiba.jpg");
@@ -50,14 +51,15 @@ h1 {
 .card {
     display: flex;
     flex-direction: column;
+    position: relative;
 
-    max-width: 62rem;
-    min-height: 75vh;
+    max-width: 81.25rem;
+    min-height: 70vh;
 
     background-color: rgba(37, 37, 37, 0.5);
     backdrop-filter: blur(1rem);
     border-radius: 0.8rem;
-    box-shadow: 0 2px 4px rgba(22, 22, 22, 0.6);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .card_image-container {  
@@ -78,17 +80,22 @@ h1 {
     flex-direction: column;
     color: #ffffff;
     text-align: justify;
-    padding: 2rem;
+    line-height: 1.2rem;
+    padding: 2rem 2rem 5rem 2rem;
 }
 
 .card_header,
 .card_footer {
-    flex: 0 0 0;
+    flex: 0 0 auto;
 }
 
 .card_footer {
-    margin-top: 2rem;
+    padding: 0;
+    margin: 0;
     text-align: right;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
 }
 
 .card_body {
@@ -112,7 +119,6 @@ h1 {
 
     .card_contents {
         flex: 1 1 55%;
-        padding: 3rem;
     }
 }
 
@@ -177,7 +183,7 @@ h1 {
 }
 
 .social-button--linkedin:hover {
-    background-color: #003c9c;
+    background-color: #044cc1;
 }
 
 .social-button--instagram {
@@ -309,7 +315,7 @@ h1 {
     border-color: #4a4a4a;
 }
 
-.fullscreen-menu__title {
+.fullscreen-menu_title {
     max-width: 30rem;
     margin: 0 auto;
 }
@@ -346,8 +352,9 @@ h1 {
     font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 46rem) {
+@media only screen and (min-width: 37.5rem) {
     .fullscreen-menu-container {
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
