@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Fullscreen Menu</title>
+    <link rel="stylesheet" href="assets/css/sanitize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="fullscreen-menu-container js-menu-container">
+        <a class="js-menu-close menu-button">
+            <div class="menu-icon is-active">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+        <div class="fullscreen-menu">
+            <div class="fullscreen-menu_image-container"></div>
+            <nav class="fullscreen-menu_nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a target="_blank" href="#" class="social-button--github"><i class="icon--github"></i></a>
+            <a target="_blank" href="#" class="social-button--linkedin"><i class="icon--linkedin"></i></a>
+            <a target="_blank" href="#" class="social-button--instagram"><i class="icon--instagram"></i></a>
+        </div>
+    </div>
+    <article class="card">
+        <aside class="card_image-container">
+            <a class="js-menu-button menu-button">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+            <img class="card_image" src="https://source.unsplash.com/random">
+        </aside>
+        <section class="card_contents">
+            <header class="card_header">
+                <h1 class="card_title">Fullscreen Menu with Javascript and Flexbox.</h1>
+            </header>
+            <section class="card_body">
+                <p>Navigation is one of the most important elements of your website so today we'll be creating a modern overlay style menu using jQuery and Flexbox.</p>
+                <p>Starting with the layout for mobile we'll stack the elements on top of one another and then move on to centre the elements and share the available space between navigation items when the viewport is large enough and then fix the whole content block perfectly centred at a set maximum width, allowing the height to be dictated by the content.</p>
+            </section>
+            <footer class="card_footer">
+                <a target="_blank" href="#" class="social-button--github"><i class="icon--github"></i></a>
+                <a target="_blank" href="#" class="social-button--linkedin"><i class="icon--linkedin"></i></a>
+                <a target="_blank" href="#" class="social-button--instagram"><i class="icon--instagram"></i></a>
+            </footer>
+        </section>
+    </article>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
